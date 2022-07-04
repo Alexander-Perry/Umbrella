@@ -1,48 +1,38 @@
-Project 1: Interactive Front-End Application
-
-Project Name: Umbrella 
+  # Umbrella 
 
 Project Application: Interactive Address Book
 
 Project Members: Andrea Bell, Wendy Marcela Mejia Ortiz, Alex Perry, Dan Smith, Sabrina Williams
 
 ## Project deployment: 
-💡 See live version here: [https://marcelamejiao.github.io/Umbrella-Address-Book/](https://marcelamejiao.github.io/Umbrella-Address-Book/)
+💡 See live version here: https://alexander-perry.github.io/Umbrella/
 
-Github repository: https://github.com/marcelamejiao/Umbrella-Address-Book
+Github repository: https://github.com/Alexander-Perry/Umbrella
 
 ## User Story:
-AS A person wanting to socialise
-I WANT an application to be able to look up my friends in an address book, see their address on a map, and what the weather is like where they are
-SO THAT I can plan a visit to them (and know whether I need to take an umbrella or not)
+* AS A person wanting to socialise
+* I WANT an application to be able to look up my friends in an address book, see their address on a map, and what the weather is like where they are
+* SO THAT I can plan a visit to them and know whether I need to take an umbrella or not
 
-## Project Requirements:
-
-* Use a CSS framework like Bootstrap, Materialize, Bulma, etc.
-
-* Be deployed to GitHub Pages.
-
-* Be interactive (i.e., accept and respond to user input).
-
-* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
-
-* Does not use alerts, confirms, or prompts (use modals).
-
-* Use client-side storage to store persistent data.
-
-* Be responsive.
-
-* Have a polished UI.
-
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+## Scope: 
+To create an interactive application where:
+* A user has an addressbook, where they can save contact information including name, address, phone number and email address
+* Saved information persists across browser sessions
+* Clicking a contact displays current weather, the contact information and the address on a map at the contact's location. 
+* Has the ability to add/remove contacts
+* Project utilises a CSS framework
+* is Interactive (responds to user input)
+* Uses at least 2 server-side APIs
+* Uses modal boxes only, and no alerts or prompts. 
+* Is responsive and displays correctly on both desktop and mobile
+* UI is polished - Correct alignment, display is neat and logical
+* Repository Data is clean, structured and well documented
+* Readme file is properly documented, including Unique name, description, technologies used, screenshot and link to deployed application
 
 ## Acceptance Criteria
 
-It's done when I am presented with a landing page where I can enter the address of my friend and save as a contact.
-
-When I click on that contact, I am taken to a map displaying their location and the prevailing weather conditions of that location.
+* It's done when I am presented with a landing page where I can enter the address of my friend and save as a contact.
+* When I click on that contact, I am taken to a map displaying their location and the prevailing weather conditions of that location.
 
 
 ## Wireframe
@@ -84,7 +74,12 @@ Diverse buttons are displayed on the screen to help the user to navigate in the 
 
 To create a contact the user press the "+" button, where a modal is displayed with 5 inputs: first name, last name, phone number, email and address. When the user presses the "save" button this information is sent to the local storage and it is displayed on the list as a contact button with the first name and last name of the recently saved contact. This is also a button that when pressed the contact information is displayed on the top right corner of the screen and also the map is updated with the contact's current location.
 
+### Bootstrap
+Page design and styling handled via Bootstrap with slight CSS for colours and id styling. 
+Bootstrap handles responsive design of the page and configuration ensures the application displays well on both desktop and mobile views. 
 
-<img width="2082" alt="before" src="https://user-images.githubusercontent.com/36496885/177035150-a172c1d7-0a16-44c5-8253-1102bdb27cae.png">
+![alexander-perry github io_Umbrella_](https://user-images.githubusercontent.com/102524579/177142619-efedfa85-b973-4b66-bd02-90b2fe6a5b94.png)
+
+![alexander-perry github io_Umbrella_ (1)](https://user-images.githubusercontent.com/102524579/177142635-ee81c03e-6d34-494f-be82-11aa7a76860a.png)
 
 
