@@ -9,6 +9,8 @@ Project Members: Andrea Bell, Wendy Marcela Mejia Ortiz, Alex Perry, Dan Smith, 
 
 Github repository: https://github.com/Alexander-Perry/Umbrella
 
+Presentation: https://github.com/Alexander-Perry/Umbrella/blob/main/Project%20Presentation%20Umbrella.pdf
+
 ## User Story:
 * AS A person wanting to socialise
 * I WANT an application to be able to look up my friends in an address book, see their address on a map, and what the weather is like where they are
