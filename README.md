@@ -34,6 +34,15 @@ To create an interactive application where:
 * It's done when I am presented with a landing page where I can enter the address of my friend and save as a contact.
 * When I click on that contact, I am taken to a map displaying their location and the prevailing weather conditions of that location.
 
+## Technologies used: 
+* HTML
+* CSS
+* JavaScript
+* JQuery
+* Bootstrap
+* WeatherAPI
+* Google Maps API
+* FontAwesome
 
 ## Wireframe
 
