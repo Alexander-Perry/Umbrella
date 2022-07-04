@@ -8,10 +8,6 @@
 //  data.current.temp_c = dec - temperature in celcius
 //  data.current.condition.text = string - current weather condition
 //  data.current.is_day = bool - 1=day, 0=night
-// TODO:
-// Add icons to function - ./assets/weather/64x42/...
-//  --conditional checks for day/night and condition...
-// Add conditionals for Weather for Umbrella, jacket, etc.
 // ##################################
 function checkWeather(lat, long) {
     var apiUrl = "https://api.weatherapi.com/v1/current.json?key=6ae7c76b7b7d498db7a75709222206&q=" + lat + ", " + long + "&aqi=no";
@@ -51,6 +47,7 @@ var state = {
     contacts: []
 };
 
+// init function
 function init() {
     // Load the state object from local storage
     loadState();
@@ -62,6 +59,7 @@ function init() {
 
 }
 
+// renderContactList function
 function renderContactList() {
     // Defines contactList
     var contactList = $("#contact-list ul");
@@ -95,6 +93,9 @@ function renderContactList() {
     }
 }
 
+// callAllFunctions function
+// runs addressToMap function based on selected contact
+// runs renderContactInformation function to display the contact info on selected contact. 
 function callAllFunctions() {
     // Update the contact's location on the map
     var address = $(this).attr('data-address');
@@ -106,6 +107,7 @@ function callAllFunctions() {
     renderContactInformation(contact);
 }
 
+// renderContactInformation function - displays the contact info from selected contact
 function renderContactInformation(contact) {
     $("#display-name").text(contact.firstName + " " + contact.lastName);
     $("#display-number").text(contact.phoneNumber);
@@ -113,6 +115,7 @@ function renderContactInformation(contact) {
     $("#display-address").text(contact.address);
 }
 
+// deleteContact function - removes from local storage, then reloads conactList
 function deleteContact() {
     var contactIndex = $(this).attr('data-contact-index');
     state.contacts.splice(contactIndex, 1);
@@ -120,10 +123,14 @@ function deleteContact() {
     renderContactList();
 }
 
+//newContact function
+// Displays the modal window for new contact information
 function newContact() {
     $("#contact-information").modal("show");
 }
 
+// saveContact function
+// validates all entries filled, saves to local storage and clears entries
 function saveContact(event) {
     // Stop the page from refreshing
     event.preventDefault();
@@ -164,6 +171,8 @@ function saveContact(event) {
     renderContactList();
 }
 
+//loadState function
+// loads contacts from localstorage
 function loadState() {
     var json = localStorage.getItem("umbrella-address-book");
 
@@ -172,15 +181,19 @@ function loadState() {
     }
 }
 
+//saveState function
+// Saves to local storage
 function saveState() {
     var json = JSON.stringify(state);
-
     localStorage.setItem("umbrella-address-book", json);
 }
 
-// Rendering a map from Google Maps API
 
+// Rendering a map from Google Maps API
+// addressToMap function
+// takes address parameter from selected contact
 // Converts address to Lat and Long values and renders Map
+// runs the renderMap and checkWeather functions using returned lat, lng data
 function addressToMap(address) {
     // API call to geocode the address. Added my API in the function instead of global variable to reduce merge conflicts
     fetch("https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(address) + '&key=' + "AIzaSyDSVjMQM3Hgp3upVIWiHSW1CTTP-VFT85A")
@@ -213,5 +226,5 @@ function renderMap(lat, lng) {
         map: map,
     });
 }
-
+// runs init function on page-load. 
 init();
