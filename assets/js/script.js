@@ -22,7 +22,7 @@ function checkWeather(lat, long) {
                         rain: data.current.condition.text.includes("rain")
                     };
                     // Create the html string based off temperature and condition - temperature-condition image - temperature image - umbrella image
-                    var weatherString = weather.temp + '°C' + '<img src=http:' + weather.icon + '></img>';
+                    var weatherString = weather.temp + '°C' + '<img src=https:' + weather.icon + '></img>';
                     if (weather.temp <= 16) {
                         weatherString += '<img src=./assets/images/snowflake.png>';
                     } else if (weather.temp > 16 && weather.temp < 24) {
